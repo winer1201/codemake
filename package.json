@@ -1,0 +1,35 @@
+{
+  "name": "tool",
+  "version": "1.0.0",
+  "description": "tool",
+  "scripts": {
+    "build": "npm install --registry=http://registry.npm.taobao.org/ --disturl=https://npm.taobao.org/dist",
+    "start": "gulp"
+  },
+  "repository": {},
+  "author": "svon",
+  "license": "ISC",
+  "bugs": {},
+  "homepage": "",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer-core": "^6.0.1",
+    "browser-sync": "^2.12.3",
+    "css-mqpacker": "^4.0.1",
+    "cssnano": "^3.5.2",
+    "csswring": "^4.2.2",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-less": "^3.0.5",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "postcss-import": "^8.1.0",
+    "postcss-nested": "^1.0.0",
+    "steelvon_layout": "^0.3.2"
+  }
+}

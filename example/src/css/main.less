@@ -1,0 +1,59 @@
+@import "./mixin/global.less";  // 引入模块
+@fontSize : 14px; //定义一个变量
+body{
+	font-size: @fontSize;
+}
+
+/**
+ * 定义一个函数
+ * @param  {[type]} @width: 100%      有一个为 $width 的变量，默认值为 100%
+ */
+.wrap(@width: 500px){
+	width: @width;
+	@left : 50px; //定义一个变量
+	p{
+		margin-left: @left;
+		display: block;
+		width: @width - @left; //减去 left 的宽度，等于 p 元素能获取的最大宽度了
+
+		color: blue;
+		font-weight: bold;
+
+		font-size: @fontSize + 10px;
+		//比如 14px 大小的文字，行高等于 22px
+		// 加 1 是故意的，方便查看 round 取整函数
+		line-height: round((@fontSize + 1px) * 1.5); // 文字行高一般为 字体大小的 1.5 倍
+	}
+	.clearfix();  /** 导入 清除浮动函数 **/
+	.left{
+		float:left;
+	}
+	.right{
+		float:right;
+	}
+}
+
+
+.font {
+	font-size: 14px;
+	color: red;
+	text-decoration: none;
+}
+
+
+
+.wrap{
+
+	.wrap(500px);  //导入 函数为 wrap
+	.font(); //继承 .font 类，这样 .wrap 就可以直接使用 .font 的所有属性了
+}
+//把括号弄掉了   你继续
+.content{
+	background-color: gray;
+	font-size: @fontSize;
+	color: #fff;
+}
+
+
+
+

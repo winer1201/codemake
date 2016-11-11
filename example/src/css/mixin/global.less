@@ -1,0 +1,27 @@
+@staticPath : "";
+
+//定义一个函数
+.clearfix(){
+	zoom: 1;
+    &:after{
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden
+    }
+}
+
+.f-left(){
+	float: left !important;
+}
+.f-right(){
+	float: right !important;
+}
+.hide(){
+	display: none !important;
+}
+
+.clearfix{
+    .clearfix();  /** 导入 函数 **/
+}
